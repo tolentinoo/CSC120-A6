@@ -15,7 +15,8 @@ public class House extends Building {
   }
 
   public static void main(String[] args) {
-    new House("Cushing House", "1 Paradise Rd", 5, "T");
+    House Cushing = new House("Cushing House", "1 Paradise Rd", 5, true );
+    System.out.print(Cushing);
   }
 
 }
