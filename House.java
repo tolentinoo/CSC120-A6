@@ -1,5 +1,6 @@
 /* This is a stub for the House class */
 import java.util.ArrayList;
+
 public class House extends Building {
 
   ArrayList <String> residents;
@@ -13,9 +14,34 @@ public class House extends Building {
     System.out.println("You have built a house: 🏠");
 
   }
+  public boolean hasDiningRoom();{
+    this.
+  }
+
+  public int nResidents();{
+
+  }
+  /**
+   * @param name
+   */
+
+  public void moveIn(String name){
+
+  }
+  
+  /**
+   * @param name
+   * @return
+   */
+
+  public String moveOut(String name); {
+
+  }
+
+  
 
   public static void main(String[] args) {
-    House Cushing = new House("Cushing House", "1 Paradise Rd", 5, true );
+    House Cushing = new House("Cushing House", "1 Paradise Rd Northampton, MA 01063", 5, true );
     System.out.print(Cushing);
   }
 
