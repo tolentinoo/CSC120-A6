@@ -18,11 +18,29 @@ public class Cafe extends Building {
     }
 
     public void sellCoffee(int size, int nSugarPackets, int nCreams){
-        
+        if (this.nCoffeeOunces ==0 || this.nSugarPackets == 0 || this.nCreams ==0|| this.nCups==0){
+            restock(10,10,10,10);
+        }
+
+        this.nCoffeeOunces -= size;
+        this.nSugarPackets -= nSugarPackets;
+        this.nCreams -= nCreams;
+        this.nCups -= 1;
+        // if-else statement, default restock 
     }
-    
+
+    private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
+            this.nCoffeeOunces += nCoffeeOunces;
+            this.nSugarPackets += nSugarPackets;
+            this.nCreams += nCreams;
+            this.nCups += nCups;
+    } 
+    // print statement to test 
     public static void main(String[] args) {
-        new Cafe();
+       Cafe shop = new Cafe("Compass Cafe", "1 Neilson Way Northampton,MA 01063",1);
+       System.out.println(shop);
+       shop.sellCoffee(12,4,5);
+
     }
     
 }

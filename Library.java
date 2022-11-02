@@ -29,11 +29,13 @@ public class Library extends Building {
 
     }// returns true if the title appears as a key in the Libary's collection, false otherwise
     public boolean isAvailable(String title){ 
-      return this.collection.containsValue(title);
+      return this.collection.get(title);
     }// returns true if the title is currently available, false otherwise
+
     public void printCollection(){
 
     } // prints out the entire collection in an easy-to-read way (including checkout status)
+    //for loop, banner
     public static void main(String[] args) {
       Library FL = new Library ("Forbes ", "33 Green St Northampton, MA 01063", 4);
       System.out.println(FL);
