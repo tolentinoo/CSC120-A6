@@ -25,8 +25,8 @@ public class Cafe extends Building {
 
 
     /**
-     * 
-     * @param size
+     * Sells a cup of coffee 
+     * @param size 
      * @param nSugarPackets
      * @param nCreams
      */
