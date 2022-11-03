@@ -1,11 +1,17 @@
 /* This is a stub for the Cafe class */
 public class Cafe extends Building {
-
+    /**
+     * The attributes 
+     */
     private int nCoffeeOunces; // The number of ounces of coffee remaining in inventory
     private int nSugarPackets; // The number of sugar packets remaining in inventory
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
 
+    
+    /**
+     * The constructor 
+     */
     public Cafe (String name, String address, int nFloors){
         super(name, address, nFloors);
         this.nCoffeeOunces = 120 ;
@@ -17,6 +23,13 @@ public class Cafe extends Building {
         System.out.println("You have built a cafe: ☕");
     }
 
+
+    /**
+     * 
+     * @param size
+     * @param nSugarPackets
+     * @param nCreams
+     */
     public void sellCoffee(int size, int nSugarPackets, int nCreams){
         if (this.nCoffeeOunces ==0 || this.nSugarPackets == 0 || this.nCreams ==0|| this.nCups==0){
             restock(10,10,10,10);
