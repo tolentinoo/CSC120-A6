@@ -1,4 +1,5 @@
 import java.util.Hashtable;
+import java.util.Set;
 
 
 /* This is a stub for the Library class */
@@ -33,14 +34,27 @@ public class Library extends Building {
     }// returns true if the title is currently available, false otherwise
 
     public void printCollection(){
-
-    } // prints out the entire collection in an easy-to-read way (including checkout status)
+      System.out.print("**** My Collection *****");
+      Set <String> title = collection.keySet();
+      for(String key : title){
+        if (collection.get(key)== true ){
+          System.out.println("The book "+ key +" is available");
+        }
+        else{
+          System.out.println("The book "+ key +" is unavailable ");
+        }
+        
+    } 
+  }
+    // prints out the entire collection in an easy-to-read way (including checkout status)
     //for loop, banner
+
     public static void main(String[] args) {
       Library FL = new Library ("Forbes ", "33 Green St Northampton, MA 01063", 4);
       System.out.println(FL);
       FL.addTitle("New Story");
       System.out.println(FL.collection);
+      FL.printCollection();
     }
   
   }

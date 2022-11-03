@@ -8,10 +8,10 @@ public class Cafe extends Building {
 
     public Cafe (String name, String address, int nFloors){
         super(name, address, nFloors);
-        this.nCoffeeOunces = 3 ;
-        this.nSugarPackets = 3;
-        this.nCreams = 3; 
-        this.nCups = 3;
+        this.nCoffeeOunces = 120 ;
+        this.nSugarPackets = 100;
+        this.nCreams = 100; 
+        this.nCups = 100;
         
 
         System.out.println("You have built a cafe: ☕");
